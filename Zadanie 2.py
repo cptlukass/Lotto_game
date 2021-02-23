@@ -11,15 +11,15 @@ def lotto():
     num_list = []
     while len(num_list) < 6:
         try:
-            user_num = input(f"Wytypuj liczbę nr {str_index}: ")
+            user_num = input(f"Pick a number no. {str_index}: ")
             input_num = int(user_num)
             if input_num not in num_list and input_num in range(1, 50):
                 num_list.append(input_num)
                 str_index += 1
             else:
-                print("Liczba się powtarza lub jest spoza zakresu!")
+                print("Number repeated or it's out of range!")
         except ValueError:
-            print("Podana wartość nie jest liczbą!")
+            print("That's not a number!")
     num_list.sort()
     print(num_list)
     winning_list = []
